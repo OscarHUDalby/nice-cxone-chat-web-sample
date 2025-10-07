@@ -15,7 +15,7 @@
     "web-vitals": "^3.5.2"
   },
   "scripts": {
-    "start": "HTTPS=true vite",
+    "start": "cross-env HTTPS=true vite",
     "start:messenger": "REACT_APP_VARIANT=MESSENGER vite",
     "start:multithread": "REACT_APP_VARIANT=MULTITHREAD vite",
     "start:livechat": "REACT_APP_VARIANT=LIVECHAT vite",
@@ -37,6 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "cross-env": "^10.1.0",
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",

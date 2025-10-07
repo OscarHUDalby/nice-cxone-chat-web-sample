@@ -8,22 +8,18 @@
 To quickly start using the sample app, perform the following steps:
 
 1. **Clone the Repository:**
-
    - Execute the command `git clone https://github.com/nice-devone/nice-cxone-chat-web-sample.git` to clone the project onto your local machine.
 
 2. **Install Dependencies:**
-
    - Navigate to the cloned project's directory.
    - Run `npm install` to install the required dependencies.
 
 3. **Environment Configuration:**
-
    - Locate the `.env.sample` file in the root directory.
    - Create a copy of this file and rename it to `.env`.
    - Populate the `.env` file with the necessary environment variables as per your project's requirements.
 
 4. **Application Variant Selection:**
-
    - Choose which variant of the app you wish to run.
    - Assign the `REACT_APP_VARIANT` variable in your `.env` file to:
      - `MESSENGER` for a messaging-focused interface.
@@ -32,8 +28,11 @@ To quickly start using the sample app, perform the following steps:
      - `THIRD_PARTY_OAUTH` for integrating third-party OAuth providers - it requires channel `Authentication` to be configured
      - `SECURED_SESSION` for messenger or livechat with secured session - it requires channel `Authentication` to be configured
 
-5. **Starting the Application:**
+5. **Fixing the potential HTTP err:**
+   - install cross-env: npm install --save-dev cross-env
+   - in package.json, change the start script to: "start": "cross-env HTTPS=true vite"
 
+6. **Starting the Application:**
    - Run the command `npm start` from the terminal.
    - Open a web browser and navigate to the URL output in the terminal to access the app.
 

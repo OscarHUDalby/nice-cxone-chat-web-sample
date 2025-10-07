@@ -312,6 +312,7 @@ export const LivechatWindow: FC<LiveChatWindowProps> = ({ sdk, thread }) => {
   const handlePostback = useCallback(
     async (postback: Postback) => {
       const { text, postback: postbackValue } = postback;
+      // TODO this method is used for ListPicker and QuickReplies
       await thread.sendPostbackMessage(postbackValue, text);
     },
     [thread],
